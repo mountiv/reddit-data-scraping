@@ -1,18 +1,16 @@
 const express = require("express");
 const mongoose = require("mongoose");
 require("dotenv").config();
+const { DEV_DBPATH, TEST_DBPATH } = require("./config/db.config");
 
 const host = process.env.HOST;
-const port =
-  process.env.NODE_ENV == "development"
-    ? process.env.DEV_PORT
-    : process.env.PROD_PORT;
-const db = process.env.DB_PATH;
+const port = process.env.PORT;
+const db = process.env.NODE_ENV == "dev" ? DEV_DBPATH : TEST_DBPATH;
 
 main().catch((err) => console.log(err));
 
 async function main() {
-  await mongoose.connect(db);
+  const aaa = await mongoose.connect(db);
   console.log(`${process.env.NODE_ENV} database connected`);
 }
 
@@ -21,11 +19,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", function (req, res) {
-  res.send("works!");
+  res.status(200).send("api server works!");
 });
 
 app.use("*", function (req, res) {
-  res.send("Can't found this page!");
+  console.log(req);
+  res.status(404).send("Can't found this page!");
 });
 
 app.listen(port, () => {
@@ -33,3 +32,5 @@ app.listen(port, () => {
     `${process.env.NODE_ENV} server running on http://${host}:${port}`
   );
 });
+
+module.exports = app;
