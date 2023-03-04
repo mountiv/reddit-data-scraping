@@ -1,11 +1,9 @@
 const mongoose = require("mongoose");
 const { Schema, model } = mongoose;
 
-const userSchema = new Schema({
+const RedditUserSchema = new Schema({
   kind: String,
   data: Object,
 });
 
-const User = model("User", userSchema);
-
-module.exports = User;
+module.exports = model("RUser", RedditUserSchema);
