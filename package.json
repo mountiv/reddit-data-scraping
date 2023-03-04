@@ -5,12 +5,14 @@
   "main": "./src/index.js",
   "scripts": {
     "dev": "nodemon ./src/index.js",
+    "demo": "node ./src/demo/demo.js",
     "cron": "node ./src/demo/cron.js",
-    "demo": "node ./src/demo/demo.js"
+    "test": "mocha --timeout 10000"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.1.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
@@ -22,5 +24,10 @@
     "request": "^2.88.2",
     "request-promise": "^4.2.6",
     "snoowrap": "^1.23.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "chai-http": "^4.3.0",
+    "mocha": "^10.2.0"
   }
 }
