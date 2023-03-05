@@ -29,5 +29,17 @@ module.exports = {
   saveRUsers: async function (req, res) {
     saveAllRUsers("ThisIsMyRandomString...");
     res.send("all users saving triggered.");
-  }
+  },
+  getRUsers: async function (req, res) {
+    const limit = req.query.limit == undefined ? 25 : req.query.limit;
+    const offset = req.query.offset == undefined ? 0 : req.query.offset;
+    const filter =
+      req.query.filter == undefined ? {} : JSON.parse(req.query.filter);
+    const users = await RUser.find(filter).limit(limit).skip(offset).exec();
+    if (users.length > 0) {
+      res.json({ result: true, data: users });
+    } else {
+      res.json({ result: false, data: "not found users." });
+    }
+  },
 };
