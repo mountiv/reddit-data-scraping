@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"username\":\"testuser\", \"email\":\"testuser@example.com\", \"social\":{\"git\":\"adsf\",\"medium\":\"@eald\"},\"password\":\"samplepassword\"}",
+					"raw": "{\"username\":\"testuser\", \"email\":\"testuser@example.com\"},\"password\":\"samplepassword\"}",
 					"options": {
 						"raw": {
 							"language": "json"
