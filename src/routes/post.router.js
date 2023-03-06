@@ -18,7 +18,7 @@ router.delete("/post/:id", function (req, res) {
   controller.deletePost(req, res);
 });
 
-router.get("/search", function (req, res) {
+router.get("/post/search", function (req, res) {
   controller.searchPosts(req, res);
 });
 

@@ -52,7 +52,7 @@ module.exports = {
   },
   getLastPosts: async function (req, res) {
     const limit = req.query.limit == undefined ? 25 : req.query.limit;
-    const offset = req.query.offset == undefined ? 25 : req.query.offset;
+    const offset = req.query.offset == undefined ? 0 : req.query.offset;
     const filter =
       req.query.filter == undefined ? {} : JSON.parse(req.query.filter);
     const new_filter = Object.assign(filter, {
@@ -83,7 +83,7 @@ module.exports = {
   },
   searchPosts: async function (req, res) {
     const limit = req.query.limit == undefined ? 25 : req.query.limit;
-    const offset = req.query.offset == undefined ? 25 : req.query.offset;
+    const offset = req.query.offset == undefined ? 0 : req.query.offset;
     const filter =
       req.query.filter == undefined ? {} : JSON.parse(req.query.filter);
 
