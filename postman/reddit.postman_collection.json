@@ -1,0 +1,56 @@
+{
+	"info": {
+		"_postman_id": "de068b40-26a0-4ca9-97db-bc2fab23e763",
+		"name": "reddit",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24640615"
+	},
+	"item": [
+		{
+			"name": "get all reddits",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3R1c2VyQGV4YW1wbGUuY29tIiwidXNlcm5hbWUiOiJ0ZXN0dXNlciIsIl9pZCI6IjYzY2ZkNDBkNDgwYjQ2MzEyYjQ4NjUzYSIsImlhdCI6MTY3NDU2NDY3NSwiZXhwIjoxNjc0NjUxMDc1fQ.SbZ-VP4A298GhiNvmZaNMVeBJlwHvMH0TWh8VbMU4ko",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/reddits?filter={\"data.display_name\": \"AskReddit8\"}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"reddits"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "15",
+							"disabled": true
+						},
+						{
+							"key": "offset",
+							"value": "50",
+							"disabled": true
+						},
+						{
+							"key": "filter",
+							"value": "{\"data.display_name\": \"AskReddit8\"}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

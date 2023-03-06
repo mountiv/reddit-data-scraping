@@ -1,0 +1,18 @@
+{
+	"info": {
+		"_postman_id": "ead22da5-4432-407e-b013-cede65b34f1f",
+		"name": "general",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24640615"
+	},
+	"item": [
+		{
+			"name": "localhost:8000",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

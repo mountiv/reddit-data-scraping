@@ -1,0 +1,54 @@
+{
+	"info": {
+		"_postman_id": "f0190745-52b7-4687-956b-04a267bfe0cb",
+		"name": "reddit user",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24640615"
+	},
+	"item": [
+		{
+			"name": "get all reddit users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG9uZG9lQGV4YW1wbGUuY29tIiwidXNlcm5hbWUiOiJqb2RobiBkb2UiLCJfaWQiOiI2M2NlMzlkOTEwOGFjNTQ3NDAxZGI1ZDciLCJpYXQiOjE2NzQ0NjMwNDQsImV4cCI6MTY3NDU0OTQ0NH0.FM8ramjOIoaTPvU6s3xkTr1YNZU09oedgL_PewDGdlc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/rusers?limit=5&offset=4&filter={\"data.display_name\": \"u_AutoModerator\",\"data.prediction_leaderboard_entry_type\": \"IN_FEED\"}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"rusers"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "5"
+						},
+						{
+							"key": "offset",
+							"value": "4"
+						},
+						{
+							"key": "filter",
+							"value": "{\"data.display_name\": \"u_AutoModerator\",\"data.prediction_leaderboard_entry_type\": \"IN_FEED\"}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

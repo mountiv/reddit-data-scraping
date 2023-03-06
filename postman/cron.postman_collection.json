@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "1621a2f1-3bd7-47ed-9df1-33b67683ec87",
+		"name": "cron",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24640615"
+	},
+	"item": [
+		{
+			"name": "cron posts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/cron/posts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"cron",
+						"posts"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "5",
+							"disabled": true
+						},
+						{
+							"key": "offset",
+							"value": "3",
+							"disabled": true
+						},
+						{
+							"key": "filter",
+							"value": "{\"data\": {\"display_name\":\"u_aldotcom\"}}",
+							"disabled": true
+						},
+						{
+							"key": "filter",
+							"value": "{\"kind\":\"t5\"}",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cron reddits",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8000/cron/reddits",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"cron",
+						"reddits"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cron reddit users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/cron/rusers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"cron",
+						"rusers"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

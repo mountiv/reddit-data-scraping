@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "983a9c52-9be9-4cad-9f97-3c09352b15ae",
+		"name": "post",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24640615"
+	},
+	"item": [
+		{
+			"name": "get all posts",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3R1c2VyQGV4YW1wbGUuY29tIiwidXNlcm5hbWUiOiJ0ZXN0dXNlciIsIl9pZCI6IjYzZDE4ZjlhNzY0ODQwNjRhN2JiOWU1YSIsImlhdCI6MTY3NDY3OTAwNSwiZXhwIjoxNjc0NzY1NDA1fQ.ce4f70hBslTsojCEqPvkU0Q8JDvWzJyhVXYjcgUucfQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/post/all?limit=3&offset=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"post",
+						"all"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "3"
+						},
+						{
+							"key": "offset",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get latest post from a certain subreddit",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "get post by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG9uZG9lQGV4YW1wbGUuY29tIiwidXNlcm5hbWUiOiJqb2RobiBkb2UiLCJfaWQiOiI2M2NlMzlkOTEwOGFjNTQ3NDAxZGI1ZDciLCJpYXQiOjE2NzQ0NjMwNDQsImV4cCI6MTY3NDU0OTQ0NH0.FM8ramjOIoaTPvU6s3xkTr1YNZU09oedgL_PewDGdlc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/post/10g1f0x",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"post",
+						"10g1f0x"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete post by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/post/10g8yww",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"post",
+						"10g8yww"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search posts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/search?limit=15&offset=50&filter={\"data.author_fullname\": \"fao\", \"author_premium\": true}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"search"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "15"
+						},
+						{
+							"key": "offset",
+							"value": "50"
+						},
+						{
+							"key": "filter",
+							"value": "{\"data.author_fullname\": \"fao\", \"author_premium\": true}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create a post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3R1c2VyQGV4YW1wbGUuY29tIiwidXNlcm5hbWUiOiJ0ZXN0dXNlciIsIl9pZCI6IjYzZDE4ZjlhNzY0ODQwNjRhN2JiOWU1YSIsImlhdCI6MTY3NDY3OTAwNSwiZXhwIjoxNjc0NzY1NDA1fQ.ce4f70hBslTsojCEqPvkU0Q8JDvWzJyhVXYjcgUucfQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"title\":\"hello\",\"content\":\"worle\",\"keywords\":[\"d\",\"a\"], \"username\":\"testuser\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/post/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"post",
+						"create"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
