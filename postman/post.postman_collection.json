@@ -14,7 +14,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3R1c2VyQGV4YW1wbGUuY29tIiwidXNlcm5hbWUiOiJ0ZXN0dXNlciIsIl9pZCI6IjYzZDE4ZjlhNzY0ODQwNjRhN2JiOWU1YSIsImlhdCI6MTY3NDY3OTAwNSwiZXhwIjoxNjc0NzY1NDA1fQ.ce4f70hBslTsojCEqPvkU0Q8JDvWzJyhVXYjcgUucfQ",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3R1c2VyQGV4YW1wbGUuY29tIiwidXNlcm5hbWUiOiJ0ZXN0dXNlciIsIl9pZCI6IjY0MDUzN2NlNDExMTYwMjU2NjQ3YzY4ZiIsImlhdCI6MTY3ODA2NDI0NywiZXhwIjoxNjc4MTUwNjQ3fQ.rahRY8Id_pRleuCzZUlt7wPd_kDzd-Eumqa1xJfMnzk",
 							"type": "string"
 						}
 					]
@@ -22,7 +22,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/api/post/all?limit=3&offset=2",
+					"raw": "http://localhost:8000/api/posts?limit=3&offset=2",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -30,8 +30,7 @@
 					"port": "8000",
 					"path": [
 						"api",
-						"post",
-						"all"
+						"posts"
 					],
 					"query": [
 						{
@@ -63,7 +62,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG9uZG9lQGV4YW1wbGUuY29tIiwidXNlcm5hbWUiOiJqb2RobiBkb2UiLCJfaWQiOiI2M2NlMzlkOTEwOGFjNTQ3NDAxZGI1ZDciLCJpYXQiOjE2NzQ0NjMwNDQsImV4cCI6MTY3NDU0OTQ0NH0.FM8ramjOIoaTPvU6s3xkTr1YNZU09oedgL_PewDGdlc",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3R1c2VyQGV4YW1wbGUuY29tIiwidXNlcm5hbWUiOiJ0ZXN0dXNlciIsIl9pZCI6IjY0MDUzN2NlNDExMTYwMjU2NjQ3YzY4ZiIsImlhdCI6MTY3ODA2NDI0NywiZXhwIjoxNjc4MTUwNjQ3fQ.rahRY8Id_pRleuCzZUlt7wPd_kDzd-Eumqa1xJfMnzk",
 							"type": "string"
 						}
 					]
@@ -71,7 +70,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/api/post/10g1f0x",
+					"raw": "http://localhost:8000/api/post/11ji6kn",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -80,7 +79,7 @@
 					"path": [
 						"api",
 						"post",
-						"10g1f0x"
+						"11ji6kn"
 					]
 				}
 			},
@@ -136,46 +135,6 @@
 							"key": "filter",
 							"value": "{\"data.author_fullname\": \"fao\", \"author_premium\": true}"
 						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "create a post",
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3R1c2VyQGV4YW1wbGUuY29tIiwidXNlcm5hbWUiOiJ0ZXN0dXNlciIsIl9pZCI6IjYzZDE4ZjlhNzY0ODQwNjRhN2JiOWU1YSIsImlhdCI6MTY3NDY3OTAwNSwiZXhwIjoxNjc0NzY1NDA1fQ.ce4f70hBslTsojCEqPvkU0Q8JDvWzJyhVXYjcgUucfQ",
-							"type": "string"
-						}
-					]
-				},
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\"title\":\"hello\",\"content\":\"worle\",\"keywords\":[\"d\",\"a\"], \"username\":\"testuser\"}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:8000/api/post/create",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"post",
-						"create"
 					]
 				}
 			},

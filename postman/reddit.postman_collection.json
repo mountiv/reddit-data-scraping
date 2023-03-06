@@ -14,7 +14,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3R1c2VyQGV4YW1wbGUuY29tIiwidXNlcm5hbWUiOiJ0ZXN0dXNlciIsIl9pZCI6IjYzY2ZkNDBkNDgwYjQ2MzEyYjQ4NjUzYSIsImlhdCI6MTY3NDU2NDY3NSwiZXhwIjoxNjc0NjUxMDc1fQ.SbZ-VP4A298GhiNvmZaNMVeBJlwHvMH0TWh8VbMU4ko",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3R1c2VyQGV4YW1wbGUuY29tIiwidXNlcm5hbWUiOiJ0ZXN0dXNlciIsIl9pZCI6IjY0MDUzMzNhZTAyMGI3YzVmYTQ3YzIzMiIsImlhdCI6MTY3ODA2MzE4NiwiZXhwIjoxNjc4MTQ5NTg2fQ.2r1cEH2aSVItgwfbCw3is4wI89aFfe-F-tv8gTzU4xY",
 							"type": "string"
 						}
 					]
@@ -22,7 +22,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/api/reddits?filter={\"data.display_name\": \"AskReddit8\"}",
+					"raw": "http://localhost:8000/api/reddits?limit=15&offset=50",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -35,17 +35,16 @@
 					"query": [
 						{
 							"key": "limit",
-							"value": "15",
-							"disabled": true
+							"value": "15"
 						},
 						{
 							"key": "offset",
-							"value": "50",
-							"disabled": true
+							"value": "50"
 						},
 						{
 							"key": "filter",
-							"value": "{\"data.display_name\": \"AskReddit8\"}"
+							"value": "{\"data.display_name\": \"AskReddit8\"}",
+							"disabled": true
 						}
 					]
 				}

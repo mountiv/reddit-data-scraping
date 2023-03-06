@@ -10,7 +10,15 @@
 			"name": "localhost:8000",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000"
+				}
 			},
 			"response": []
 		}

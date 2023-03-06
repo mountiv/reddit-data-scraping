@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"username\":\"testuser\", \"email\":\"testuser@example.com\"},\"password\":\"samplepassword\"}",
+					"raw": "{\r\n    \"username\":\"testuser\", \r\n    \"email\":\"testuser@example.com\",\r\n    \"password\":\"samplepassword\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -43,7 +43,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"username\":\"testuser\", \"password\":\"samplepassword\"}",
+					"raw": "{\r\n    \"username\":\"testuser\", \r\n    \"password\":\"samplepassword\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"

@@ -14,7 +14,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG9uZG9lQGV4YW1wbGUuY29tIiwidXNlcm5hbWUiOiJqb2RobiBkb2UiLCJfaWQiOiI2M2NlMzlkOTEwOGFjNTQ3NDAxZGI1ZDciLCJpYXQiOjE2NzQ0NjMwNDQsImV4cCI6MTY3NDU0OTQ0NH0.FM8ramjOIoaTPvU6s3xkTr1YNZU09oedgL_PewDGdlc",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3R1c2VyQGV4YW1wbGUuY29tIiwidXNlcm5hbWUiOiJ0ZXN0dXNlciIsIl9pZCI6IjY0MDUzMzNhZTAyMGI3YzVmYTQ3YzIzMiIsImlhdCI6MTY3ODA2MzE4NiwiZXhwIjoxNjc4MTQ5NTg2fQ.2r1cEH2aSVItgwfbCw3is4wI89aFfe-F-tv8gTzU4xY",
 							"type": "string"
 						}
 					]
@@ -22,7 +22,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/api/rusers?limit=5&offset=4&filter={\"data.display_name\": \"u_AutoModerator\",\"data.prediction_leaderboard_entry_type\": \"IN_FEED\"}",
+					"raw": "http://localhost:8000/api/rusers?limit=5&offset=4",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -43,7 +43,8 @@
 						},
 						{
 							"key": "filter",
-							"value": "{\"data.display_name\": \"u_AutoModerator\",\"data.prediction_leaderboard_entry_type\": \"IN_FEED\"}"
+							"value": "{\"data.display_name\": \"u_AutoModerator\",\"data.prediction_leaderboard_entry_type\": \"IN_FEED\"}",
+							"disabled": true
 						}
 					]
 				}
