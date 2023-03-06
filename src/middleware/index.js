@@ -1,4 +1,4 @@
 module.exports = {
-    isAuth: require("./auth.middleware"),
-  };
+  isAuth: require("./auth.middleware"),
+};
   

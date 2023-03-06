@@ -15,3 +15,5 @@ router.get("/cron/reddits", function (req, res) {
 router.get("/cron/rusers", function (req, res) {
     rUserController.saveRUsers(req, res);
 });
+
+module.exports = router;
